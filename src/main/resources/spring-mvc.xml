@@ -12,9 +12,8 @@
 		http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <mvc:annotation-driven/>
-    <!--自动扫描含有@Service将其注入为bean -->
-    <!-- 自动扫描controller包下的所有类，如果@Controller注入为bean -->
-    <context:component-scan base-package="com.mice"/>
+    <!-- 自动扫描web包下的所有类，如果@Controller注入为bean -->
+    <context:component-scan base-package="com.mice.web"/>
     <context:annotation-config />
 
     <mvc:default-servlet-handler />

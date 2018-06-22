@@ -1,5 +1,7 @@
 package com.mice.common;
 
+import org.springframework.http.ResponseEntity;
+
 import java.io.Serializable;
 
 /**
@@ -33,6 +35,10 @@ public class Result<T> implements Serializable {
 
 
     public Result() {
+        ResponseEntity
+                .ok()
+                .header("Content-Disposition", "attachment; filename=\""+file.getFilename()+"\"")
+                .body(file);
     }
 
     public String getCode() {

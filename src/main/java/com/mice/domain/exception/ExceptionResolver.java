@@ -52,7 +52,7 @@ public class ExceptionResolver implements HandlerExceptionResolver {
             }else if(ex instanceof MethodArgumentNotValidException){
                 MethodArgumentNotValidException businessException = (MethodArgumentNotValidException)ex;
                 result = resolverMethodArgumentNotValidException(ex);
-            }if(ex instanceof SQLException){
+            }else if(ex instanceof SQLException){
                 SQLException sqlException = (SQLException)ex;
                 result = resolverSQLException(ex);
             }else {
